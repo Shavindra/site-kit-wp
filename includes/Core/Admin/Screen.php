@@ -12,6 +12,7 @@ namespace Google\Site_Kit\Core\Admin;
 
 use Google\Site_Kit\Context;
 use Google\Site_Kit\Core\Assets\Assets;
+use Google\Site_Kit\Core\Util\Require_Javascript_Trait;
 
 /**
  * Class representing a single screen.
@@ -21,6 +22,7 @@ use Google\Site_Kit\Core\Assets\Assets;
  * @ignore
  */
 final class Screen {
+	use Require_Javascript_Trait;
 
 	const MENU_SLUG = 'googlesitekit';
 
@@ -202,6 +204,8 @@ final class Screen {
 		if ( ! $this->args['render_callback'] ) {
 			return;
 		}
+
+		$this->get_noscript_html();
 
 		call_user_func( $this->args['render_callback'], $context );
 	}
