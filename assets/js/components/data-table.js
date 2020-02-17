@@ -100,7 +100,7 @@ export const getDataTableFromData = ( data, headers, options ) => {
 				'googlesitekit-table__wrapper',
 				{
 					'googlesitekit-table__wrapper-1': ! data && ! data[ 0 ].length,
-					[ `googlesitekit-table__wrapper--${ data[ 0 ].length }` ]: data && data[ 0 ].length,
+					[ `googlesitekit-table__wrapper--${ data[ 0 ].length }-col` ]: data && data[ 0 ].length,
 				}
 			) }>
 				<thead className="googlesitekit-table__head">
