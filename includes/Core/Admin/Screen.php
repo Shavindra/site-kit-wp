@@ -205,7 +205,7 @@ final class Screen {
 			return;
 		}
 
-		$this->get_noscript_html();
+		echo $this->get_noscript_html();
 
 		call_user_func( $this->args['render_callback'], $context );
 	}

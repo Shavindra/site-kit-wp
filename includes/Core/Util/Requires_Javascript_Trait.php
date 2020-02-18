@@ -25,13 +25,23 @@ Trait Require_Javascript_Trait {
 	 * @since 1.1.2
 	 *
 	 * @link https://php.net/manual/en/function.filter-input.php
-	 * @return mixed                     Value of the requested variable on success,
+	 * @return string noscript HTML tag,
 	 */
 	public function get_noscript_html() {
 
-		$no_script = sprintf(
-			'<noscript>%s</noscript>',
-			esc_html__( 'The Google Site Kit Plugin needs Javascript enabled', 'google-site-kit' )
+		$no_script = sprintf('
+			<noscript>
+				<div class="mdc-layout-grid googlesitekit-no-js">
+					<div class="mdc-layout-grid__inner">
+						<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+							<h3 class="googlesitekit-heading-2 googlesitekit-no-js__title">
+								%s
+							</h3>
+						</div>
+					</div>
+				</div>
+			</noscript>',
+			esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' )
 		);
 		
 		return apply_filters( 'googlesitekit_noscript_html', $no_script );
