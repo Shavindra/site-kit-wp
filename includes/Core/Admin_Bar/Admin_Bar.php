@@ -256,6 +256,7 @@ final class Admin_Bar {
 		ob_start();
 
 		?>
+		<!-- TODO: hide/display on no JS -->
 		<div class="googlesitekit-plugin">
 			<div id="js-googlesitekit-adminbar" class="ab-sub-wrapper googlesitekit-adminbar googlesitekit-adminbar--loading">
 				<div class="googlesitekit-adminbar__loading">

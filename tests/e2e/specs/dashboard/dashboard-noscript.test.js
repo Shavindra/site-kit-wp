@@ -8,11 +8,26 @@ import { activatePlugin, visitAdminPage } from '@wordpress/e2e-test-utils';
  */
 import { setSiteVerification, resetSiteKit } from '../../utils';
 
+const activateSiteKit = async () => {
+	try {
+		await activatePlugin( 'google-site-kit' );
+	} catch {
+		await activatePlugin( 'site-kit-by-google' );
+	}
+};
+
+const deactivateSiteKit = async () => {
+	try {
+		await deactivatePlugin( 'google-site-kit' );
+	} catch {
+		await deactivatePlugin( 'site-kit-by-google' );
+	}
+};
+
 describe( 'Site Kit noscript message', () => {
 	beforeAll( async () => {
-		await activatePlugin( 'e2e-tests-auth-plugin' );
-		await activatePlugin( 'e2e-tests-admin-bar-visibility' );
-		await setSiteVerification();
+		await activateSiteKit();
+		// await setSiteVerification();
 	} );
 
 	beforeEach( async () => {
@@ -22,6 +37,7 @@ describe( 'Site Kit noscript message', () => {
 
 
 	afterEach( async () => {
+		await deactivateSiteKit();
 		await resetSiteKit();
 	} );
 

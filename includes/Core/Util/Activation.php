@@ -155,6 +155,7 @@ final class Activation {
 				'content'         => function() {
 					ob_start();
 					?>
+					<!-- TODO: Hide/display on nojs -->
 					<div class="googlesitekit-plugin">
 						<div id="js-googlesitekit-activation" class="googlesitekit-activation googlesitekit-activation--loading">
 							<div class="googlesitekit-activation__loading">
