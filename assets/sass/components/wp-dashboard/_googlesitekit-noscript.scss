@@ -16,12 +16,9 @@
  * limitations under the License.
  */
 
-.googlesitekit-no-js {
-
+.googlesitekit-noscript {
 	@include googlesitekit-inner-padding;
 	@include shadow;
 	background-color: $c-base;
-	position: relative;
-	z-index: 10;
-
+	margin-left: -20px;
 }

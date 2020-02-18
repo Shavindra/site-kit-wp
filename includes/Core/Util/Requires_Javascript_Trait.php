@@ -30,17 +30,19 @@ Trait Require_Javascript_Trait {
 
 		$no_script = sprintf('
 			<noscript>
-				<div class="mdc-layout-grid googlesitekit-no-js">
-					<div class="mdc-layout-grid__inner">
-						<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
-							<h3 class="googlesitekit-heading-2 googlesitekit-no-js__title">
-								%s
-							</h3>
+				<div class="googlesitekit-noscript googlesitekit-plugin">
+					<div class="mdc-layout-grid">
+						<div class="mdc-layout-grid__inner">
+							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+								<h3 class="googlesitekit-heading-3 googlesitekit-noscript__title">
+									%s
+								</h3>
+							</div>
 						</div>
 					</div>
 				</div>
 			</noscript>',
-			esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' )
+			esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' ),
 		);
 		
 		return apply_filters( 'googlesitekit_noscript_html', $no_script );
