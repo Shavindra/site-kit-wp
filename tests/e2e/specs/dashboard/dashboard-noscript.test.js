@@ -43,6 +43,6 @@ describe( 'Site Kit noscript message', () => {
 
 	it( 'Should display noscript message', async () => {
 		 await page.$( '.googlesitekit-noscript' );
-		// TODO: await expect( noJS ).toMatchElement( '.googlesitekit-dashboard-single-url__title', { text: 'Hello world!' } );
+		await expect( noJS ).toMatchElement( '.googlesitekit-googlesitekit-noscript__title', { text: 'HThe Site Kit by Google plugin requires JavaScript to be enabled in your browser.' } );
 	} );
 } );
