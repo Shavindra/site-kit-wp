@@ -1,6 +1,6 @@
 <?php
 /**
- * Trait Google\Site_Kit\Core\Util\Require_Javascript_Trait
+ * Trait Google\Site_Kit\Core\Util\Requires_Javascript_Trait
  *
  * @package   Google\Site_Kit\Core\Util
  * @copyright 2019 Google LLC
@@ -13,22 +13,22 @@ namespace Google\Site_Kit\Core\Util;
 /**
  * Trait to display no javascript fallback message.
  *
- * @since 1.1.2
+ * @since n.e.x.t
  * @access private
  * @ignore
  */
-Trait Require_Javascript_Trait {
+trait Requires_Javascript_Trait {
 
 	/**
 	 * Display fallback message when Javascript is disabled
 	 *
-	 * @since 1.1.2
+	 * @since n.e.x.t
 	 *
 	 * @return string noscript HTML tag,
 	 */
 	protected function get_noscript_html() {
 
-		$no_script = sprintf('
+		return sprintf('
 			<noscript>
 				<div class="googlesitekit-noscript googlesitekit-plugin">
 					<div class="mdc-layout-grid">
@@ -44,8 +44,6 @@ Trait Require_Javascript_Trait {
 			</noscript>',
 			esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' ),
 		);
-		
-		return apply_filters( 'googlesitekit_noscript_html', $no_script );
 	}
 }
 

@@ -12,7 +12,7 @@ namespace Google\Site_Kit\Core\Admin;
 
 use Google\Site_Kit\Context;
 use Google\Site_Kit\Core\Assets\Assets;
-use Google\Site_Kit\Core\Util\Require_Javascript_Trait;
+use Google\Site_Kit\Core\Util\Requires_Javascript_Trait;
 
 /**
  * Class representing a single screen.
@@ -22,7 +22,7 @@ use Google\Site_Kit\Core\Util\Require_Javascript_Trait;
  * @ignore
  */
 final class Screen {
-	use Require_Javascript_Trait;
+	use Requires_Javascript_Trait;
 
 	const MENU_SLUG = 'googlesitekit';
 
