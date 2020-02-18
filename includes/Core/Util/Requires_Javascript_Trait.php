@@ -27,7 +27,7 @@ Trait Require_Javascript_Trait {
 	 * @link https://php.net/manual/en/function.filter-input.php
 	 * @return string noscript HTML tag,
 	 */
-	public function get_noscript_html() {
+	protected function get_noscript_html() {
 
 		$no_script = sprintf('
 			<noscript>
