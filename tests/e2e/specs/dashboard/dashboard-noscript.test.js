@@ -26,13 +26,13 @@ const deactivateSiteKit = async () => {
 
 describe( 'Site Kit noscript message', () => {
 	beforeAll( async () => {
+		page.setJavaScriptEnabled( false );
 		await activateSiteKit();
 		// await setSiteVerification();
 	} );
 
 	beforeEach( async () => {
-		page.setJavaScriptEnabled( false );
-		await visitAdminPage( 'admin.php', 'page=googlesitekit-dashboard' );
+		await visitAdminPage( 'admin.php', 'page=googlesitekit-splash' );
 	} );
 
 
