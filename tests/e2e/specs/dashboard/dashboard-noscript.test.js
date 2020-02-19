@@ -17,23 +17,33 @@ describe( 'Site Kit noscript notice', () => {
 
 	describe( 'When Javascript is disabled', () => {
 		beforeAll( async () => {
-			await page.setJavaScriptEnabled( false );
 		} );
 
 		afterAll( async () => {
-			await page.setJavaScriptEnabled( true );
 		} );
 
 		it( 'Should not display plugin html', async () => {
+			// Disabling javascript beforeEach breaks utility functions.
+			// Therefore need to be inline
+			await page.setJavaScriptEnabled( false );
+
 			const noscript = await page.$( '#wpbody-content' );
 			await expect( noscript ).not.toMatchElement( '.js-googlesitekit-plugin' );
+
+			await page.setJavaScriptEnabled( true );
 		} );
 
 		it( 'Should display noscript notice', async () => {
+			// Disabling javascript beforeEach breaks utility functions.
+			// Therefore need to be inline	
+			await page.setJavaScriptEnabled( false );
+
 			const noscript = await page.waitForSelector( '.googlesitekit-noscript', {
 				visible: true,
 			} );
 			await expect( noscript ).toMatchElement( '.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' } );
+		
+			await page.setJavaScriptEnabled( true );
 		} );
 	} );
 } );

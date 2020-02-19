@@ -34,7 +34,6 @@ const deactivateSiteKit = async () => {
 };
 
 describe( 'Plugin Activation Notice', () => {
-	// running this only work the first time
 	describe( 'When Javascript is enabled', () => {
 		beforeEach( async () => {
 			await deactivateSiteKit();
