@@ -13,6 +13,7 @@ namespace Google\Site_Kit\Core\Admin_Bar;
 use Google\Site_Kit\Context;
 use Google\Site_Kit\Core\Permissions\Permissions;
 use Google\Site_Kit\Core\Assets\Assets;
+use Google\Site_Kit\Core\Util\Requires_Javascript_Trait;
 
 /**
  * Class handling the plugin's admin bar menu.
@@ -22,6 +23,7 @@ use Google\Site_Kit\Core\Assets\Assets;
  * @ignore
  */
 final class Admin_Bar {
+	use Requires_Javascript_Trait;
 
 	/**
 	 * Plugin context.
@@ -252,12 +254,12 @@ final class Admin_Bar {
 	 * @since 1.0.0
 	 */
 	private function menu_markup() {
-		// Start buffer output.
 		ob_start();
 
 		?>
-		<!-- TODO: hide/display on no JS -->
-		<div class="googlesitekit-plugin">
+		<?php echo $this->get_noscript_html(); // phpcs:ignore ?>
+
+		<div class="googlesitekit-plugin js-googleskit-plugin">
 			<div id="js-googlesitekit-adminbar" class="ab-sub-wrapper googlesitekit-adminbar googlesitekit-adminbar--loading">
 				<div class="googlesitekit-adminbar__loading">
 					<div role="progressbar" class="mdc-linear-progress mdc-linear-progress--indeterminate">

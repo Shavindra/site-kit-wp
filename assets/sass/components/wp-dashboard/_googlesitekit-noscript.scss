@@ -19,6 +19,29 @@
 .googlesitekit-noscript {
 	@include googlesitekit-inner-padding;
 	@include shadow;
+	
 	background-color: $c-base;
-	margin-left: -20px;
+	margin: 5px 20px 5px 0;
+	
+	&__title {
+		margin: 0
+	}
+}
+
+.no-js {
+	#googlesitekit-notice-activated {
+		padding: 0;
+		margin: 5px 15px 5px 0; // fixes the alignment with rest of the page
+		border-left-color: #ffb900; // noscript renders inside success
+
+		.googlesitekit-noscript {
+			margin: 0;
+			border: 0;
+			padding: 0;
+		}
+	}
+
+	.js-googleskit-plugin {
+		display: none;
+	}
 }

@@ -34,37 +34,90 @@ const deactivateSiteKit = async () => {
 };
 
 describe( 'Plugin Activation Notice', () => {
-	beforeEach( async () => {
-		await deactivateSiteKit();
-		await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-	} );
+	// running this only work the first time
+ 	describe('When Javascript is enabled', () => {
 
-	afterEach( async () => {
-		await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-		await activateSiteKit();
-	} );
+		beforeEach( async () => {
+			await deactivateSiteKit();
+			await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+		} );
 
-	it( 'Should be displayed', async () => {
-		await activateSiteKit();
+		afterEach( async () => {
+			await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+			await activateSiteKit();
+		} );
 
-		await page.waitForSelector( '.googlesitekit-activation' );
+		it( 'Should be displayed', async () => {
+			await activateSiteKit();
 
-		await expect( page ).toMatchElement( 'h3.googlesitekit-activation__title', { text: 'Congratulations, the Site Kit plugin is now activated.' } );
+			await page.waitForSelector( '.googlesitekit-activation' );
 
-		await deactivateSiteKit();
-	} );
+			await expect( page ).toMatchElement( 'h3.googlesitekit-activation__title', { text: 'Congratulations, the Site Kit plugin is now activated.' } );
 
-	it( 'Should lead you to the setup wizard', async () => {
-		await activateSiteKit();
+			await deactivateSiteKit();
+		} );
 
-		await page.waitForSelector( '.googlesitekit-activation' );
+		it( 'Should lead you to the setup wizard', async () => {
+			await activateSiteKit();
 
-		await expect( page ).toMatchElement( '.googlesitekit-start-setup', { text: 'Start setup' } );
+			await page.waitForSelector( '.googlesitekit-activation' );
 
-		await page.click( '.googlesitekit-start-setup' );
-		await page.waitForSelector( '.googlesitekit-wizard-step__title' );
+			await expect( page ).toMatchElement( '.googlesitekit-start-setup', { text: 'Start setup' } );
 
-		// Ensure we're on the first step.
-		await expect( page ).toMatchElement( '.googlesitekit-wizard-progress-step__number--inprogress', { text: '1' } );
-	} );
+			await page.click( '.googlesitekit-start-setup' );
+			await page.waitForSelector( '.googlesitekit-wizard-step__title' );
+
+			// Ensure we're on the first step.
+			await expect( page ).toMatchElement( '.googlesitekit-wizard-progress-step__number--inprogress', { text: '1' } );
+		
+			await deactivateSiteKit();
+		} );
+
+		it('Should not display noscript notice', async () => {
+			await activateSiteKit();
+			const noscript = await page.$( '#wpbody-content' );
+			await expect(noscript).not.toMatchElement('.googlesitekit-noscript')
+			await deactivateSiteKit();
+		});
+
+	});
+
+	// TODO
+	// describe('When Javascript is disabled', () => {
+	// 	beforeAll( async () => {
+	// 		page.setJavaScriptEnabled( false );
+	// 	} );
+	
+	// 	afterAll( async () => {
+	// 		page.setJavaScriptEnabled( true );
+	// 	} );
+
+	// 	beforeEach( async () => {
+	// 		await deactivateSiteKit();
+	// 		await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+	// 	} );
+	
+	// 	afterEach( async () => {
+	// 		await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+	// 		await activateSiteKit();
+	// 	} );
+
+	// 	it('Should not display plugin html', async () => {
+	// 		await activateSiteKit();
+	// 		const noscript = await page.$( '#wpbody-content' );
+	// 		await expect(noscript).not.toMatchElement('.js-googlesitekit-plugin')
+	// 		await deactivateSiteKit();
+	// 	});
+	
+	// 	it('Should display noscript notice', async () => {
+	// 		await activateSiteKit();
+	// 		const noscript = await page.waitForSelector('.googlesitekit-noscript', {
+	// 			visible: true,
+	// 		})
+	// 		await expect(noscript).toMatchElement('.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' });
+	// 		await deactivateSiteKit();
+
+	// 	});
+	// });
+
 } );

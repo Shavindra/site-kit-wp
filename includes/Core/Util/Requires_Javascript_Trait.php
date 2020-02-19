@@ -28,22 +28,24 @@ trait Requires_Javascript_Trait {
 	 */
 	protected function get_noscript_html() {
 
-		return sprintf('
+		ob_start();
+
+		?>
 			<noscript>
-				<div class="googlesitekit-noscript googlesitekit-plugin">
+				<div class="googlesitekit-noscript googlesitekit-plugin notice notice-warning">
 					<div class="mdc-layout-grid">
 						<div class="mdc-layout-grid__inner">
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 								<h3 class="googlesitekit-heading-3 googlesitekit-noscript__title">
-									%s
+								The Site Kit by Google plugin requires JavaScript to be enabled in your browser.
 								</h3>
 							</div>
 						</div>
 					</div>
 				</div>
-			</noscript>',
-			esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' ),
-		);
+			</noscript>
+		<?php
+		return ob_get_clean();
 	}
 }
 
