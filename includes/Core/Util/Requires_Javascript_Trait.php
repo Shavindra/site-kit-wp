@@ -37,7 +37,9 @@ trait Requires_Javascript_Trait {
 						<div class="mdc-layout-grid__inner">
 							<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
 								<h3 class="googlesitekit-heading-3 googlesitekit-noscript__title">
-								The Site Kit by Google plugin requires JavaScript to be enabled in your browser.
+									<?php
+										echo esc_html__( 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.', 'google-site-kit' )
+									?>
 								</h3>
 							</div>
 						</div>

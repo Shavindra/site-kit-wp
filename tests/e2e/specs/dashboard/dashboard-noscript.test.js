@@ -17,11 +17,11 @@ describe( 'Site Kit noscript notice', () => {
 
 	describe( 'When Javascript is disabled', () => {
 		beforeAll( async () => {
-			page.setJavaScriptEnabled( false );
+			await page.setJavaScriptEnabled( false );
 		} );
 
 		afterAll( async () => {
-			page.setJavaScriptEnabled( true );
+			await page.setJavaScriptEnabled( true );
 		} );
 
 		it( 'Should not display plugin html', async () => {

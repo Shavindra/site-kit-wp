@@ -277,7 +277,9 @@ final class Admin_Bar {
 		ob_start();
 
 		?>
-		<?php echo $this->get_noscript_html(); // phpcs:ignore ?>
+		<?php
+			echo $this->get_noscript_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		?>
 
 		<div class="googlesitekit-plugin js-googleskit-plugin">
 			<div id="js-googlesitekit-adminbar" class="ab-sub-wrapper googlesitekit-adminbar googlesitekit-adminbar--loading">

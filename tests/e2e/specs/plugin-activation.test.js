@@ -49,7 +49,7 @@ describe( 'Plugin Activation Notice', () => {
 		it( 'Should be displayed', async () => {
 			await activateSiteKit();
 
-		await page.waitForSelector( '.googlesitekit-activation__title' );
+			await page.waitForSelector( '.googlesitekit-activation__title' );
 
 			await expect( page ).toMatchElement( 'h3.googlesitekit-activation__title', { text: 'Congratulations, the Site Kit plugin is now activated.' } );
 
@@ -80,40 +80,37 @@ describe( 'Plugin Activation Notice', () => {
 		} );
 	} );
 
-	// TODO: Testing if this works in TRAVIS CI. locally fails
-	// describe( 'When Javascript is disabled', () => {
-	// 	beforeAll( async () => {
-	// 		page.setJavaScriptEnabled( false );
-	// 	} );
+	describe( 'When Javascript is disabled', () => {
+		beforeEach( async () => {
+			await deactivateSiteKit();
+		} );
 
-	// 	afterAll( async () => {
-	// 		page.setJavaScriptEnabled( true );
-	// 	} );
+		afterEach( async () => {
+			await activateSiteKit();
+		} );
 
-	// 	beforeEach( async () => {
-	// 		await deactivateSiteKit();
-	// 		await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-	// 	} );
+		it( 'Should not display plugin html', async () => {
+			// Disabling javascript beforeEach breaks utility functions.
+			// Therefore need to be inline
+			await page.setJavaScriptEnabled( false );
+			await activateSiteKit();
+			const noscript = await page.$( '#wpbody-content' );
+			await expect( noscript ).not.toMatchElement( '.js-googlesitekit-plugin' );
+			await deactivateSiteKit();
+			await page.setJavaScriptEnabled( true );
+		} );
 
-	// 	afterEach( async () => {
-	// 		await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-	// 		await activateSiteKit();
-	// 	} );
-
-	// 	it( 'Should not display plugin html', async () => {
-	// 		await activateSiteKit(); // TODO: Trying things
-	// 		const noscript = await page.$( '#wpbody-content' );
-	// 		await expect( noscript ).not.toMatchElement( '.js-googlesitekit-plugin' );
-	// 		await deactivateSiteKit(); // TODO: Trying things
-	// 	} );
-
-	// 	it( 'Should display noscript notice', async () => {
-	// 		await activateSiteKit(); // TODO: Trying things
-	// 		const noscript = await page.waitForSelector( '.googlesitekit-noscript', {
-	// 			visible: true,
-	// 		} );
-	// 		await expect( noscript ).toMatchElement( '.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' } );
-	// 		await deactivateSiteKit(); // TODO: Trying things
-	// 	} );
-	// } );
+		it( 'Should display noscript notice', async () => {
+			// Disabling javascript beforeEach breaks utility functions
+			// Therefore need to be inline
+			await page.setJavaScriptEnabled( false );
+			await activateSiteKit();
+			const noscript = await page.waitForSelector( '.googlesitekit-noscript', {
+				visible: true,
+			} );
+			await expect( noscript ).toMatchElement( '.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' } );
+			await deactivateSiteKit();
+			await page.setJavaScriptEnabled( true );
+		} );
+	} );
 } );

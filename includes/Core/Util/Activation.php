@@ -155,11 +155,11 @@ final class Activation {
 			'activated',
 			array(
 				'content'         => function() {
-
-
 					ob_start();
 					?>
-					<?php echo $this->get_noscript_html(); // phpcs:ignore ?>
+					<?php
+						echo $this->get_noscript_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+					?>
 					<div class="googlesitekit-plugin js-googleskit-plugin">
 						<div id="js-googlesitekit-activation" class="googlesitekit-activation googlesitekit-activation--loading">
 							<div class="googlesitekit-activation__loading">

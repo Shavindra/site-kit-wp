@@ -205,7 +205,7 @@ final class Screen {
 			return;
 		}
 
-		echo $this->get_noscript_html(); // phpcs:ignore
+		echo $this->get_noscript_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 
 		call_user_func( $this->args['render_callback'], $context );
 	}
