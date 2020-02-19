@@ -82,42 +82,42 @@ describe( 'Plugin Activation Notice', () => {
 
 	});
 
-	// TODO
-	// describe('When Javascript is disabled', () => {
-	// 	beforeAll( async () => {
-	// 		page.setJavaScriptEnabled( false );
-	// 	} );
+	// TODO: Testing if this works in TRAVIS CI. locally fails
+	 describe('When Javascript is disabled', () => {
+	 	beforeAll( async () => {
+	 		page.setJavaScriptEnabled( false );
+	 	} );
 	
-	// 	afterAll( async () => {
-	// 		page.setJavaScriptEnabled( true );
-	// 	} );
+	 	afterAll( async () => {
+	 		page.setJavaScriptEnabled( true );
+	 	} );
 
-	// 	beforeEach( async () => {
-	// 		await deactivateSiteKit();
-	// 		await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-	// 	} );
+	 	beforeEach( async () => {
+	 		await deactivateSiteKit();
+	 		await activatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+	 	} );
 	
-	// 	afterEach( async () => {
-	// 		await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
-	// 		await activateSiteKit();
-	// 	} );
+	 	afterEach( async () => {
+	 		await deactivatePlugin( 'e2e-tests-gcp-credentials-plugin' );
+	 		await activateSiteKit();
+	 	} );
 
-	// 	it('Should not display plugin html', async () => {
-	// 		await activateSiteKit();
-	// 		const noscript = await page.$( '#wpbody-content' );
-	// 		await expect(noscript).not.toMatchElement('.js-googlesitekit-plugin')
-	// 		await deactivateSiteKit();
-	// 	});
+	 	it('Should not display plugin html', async () => {
+	 		await activateSiteKit(); // TODO: Trying things
+	 		const noscript = await page.$( '#wpbody-content' );
+	 		await expect(noscript).not.toMatchElement('.js-googlesitekit-plugin')
+	 		await deactivateSiteKit(); // TODO: Trying things
+	 	});
 	
-	// 	it('Should display noscript notice', async () => {
-	// 		await activateSiteKit();
-	// 		const noscript = await page.waitForSelector('.googlesitekit-noscript', {
-	// 			visible: true,
-	// 		})
-	// 		await expect(noscript).toMatchElement('.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' });
-	// 		await deactivateSiteKit();
+	 	it('Should display noscript notice', async () => {
+	 		await activateSiteKit(); // TODO: Trying things
+	 		const noscript = await page.waitForSelector('.googlesitekit-noscript', {
+	 			visible: true,
+	 		})
+	 		await expect(noscript).toMatchElement('.googlesitekit-noscript__title', { text: 'The Site Kit by Google plugin requires JavaScript to be enabled in your browser.' });
+	 		await deactivateSiteKit(); // TODO: Trying things
 
-	// 	});
-	// });
+	 	});
+	 });
 
 } );
