@@ -111,6 +111,7 @@ class AdSenseSetupInstructions extends Component {
 					{
 						( 'account-connected' === accountStatus ) &&
 							<AdSenseSettings
+								statusMessage={ statusMessage }
 								isEditing={ true }
 								accountTagMatch={ accountTagMatch }
 								existingTag={ existingTag }

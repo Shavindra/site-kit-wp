@@ -26,6 +26,10 @@ import {
 	trackEvent,
 	toggleConfirmModuleSettings,
 } from 'GoogleUtil';
+/**
+ * Internal dependencies
+ */
+// import { propsFromAccountStatus } from '../util';
 
 /**
  * WordPress dependencies
@@ -37,9 +41,13 @@ import { addFilter, removeFilter } from '@wordpress/hooks';
 class AdSenseSettings extends Component {
 	constructor( props ) {
 		super( props );
-		const { useSnippet = true } = global.googlesitekit.modules.adsense.settings;
+		const {
+			useSnippet = true,
+			accountID,
+		} = global.googlesitekit.modules.adsense.settings;
 
 		this.state = {
+			accountID,
 			useSnippet: !! useSnippet,
 			disabled: false,
 		};
@@ -47,7 +55,7 @@ class AdSenseSettings extends Component {
 		this.handleUseSnippetSwitch = this.handleUseSnippetSwitch.bind( this );
 	}
 
-	componentDidMount() {
+	async componentDidMount() {
 		this._isMounted = true;
 
 		// Handle save hook from the settings page.
@@ -63,6 +71,7 @@ class AdSenseSettings extends Component {
 			} );
 
 		this.toggleConfirmChangesButton();
+		//await this.updateAccountStatus();
 	}
 
 	componentWillUnmount() {
@@ -139,49 +148,116 @@ class AdSenseSettings extends Component {
 			switchOffMessage,
 		} = this.props;
 
-		return (
-			<Fragment>
-				{
-					isEditing ?
-						<Fragment>
-							<div className="googlesitekit-setup-module__switch">
-								<Switch
-									id="enableAutoAds"
-									label={ switchLabel }
-									onClick={ this.handleUseSnippetSwitch }
-									checked={ useSnippet }
-									hideLabel={ false }
-								/> <span className="googlesitekit-recommended">{ __( 'RECOMMENDED', 'google-site-kit' ) }</span>
+		if ( isEditing ) {
+			return (
+				<Fragment>
+					<div className="googlesitekit-setup-module__switch">
+						<Switch
+							id="enableAutoAds"
+							label={ switchLabel }
+							onClick={ this.handleUseSnippetSwitch }
+							checked={ useSnippet }
+							hideLabel={ false }
+						/> <span className="googlesitekit-recommended">{ __( 'RECOMMENDED', 'google-site-kit' ) }</span>
+					</div>
+					{
+						useSnippet && switchOnMessage &&
+						<div className="googlesitekit-settings-notice googlesitekit-settings-notice--suggestion">
+							<div className="googlesitekit-settings-notice__text">
+								{ switchOnMessage }
 							</div>
+						</div>
+					}
+					{
+						! useSnippet && switchOffMessage &&
+						<div className="googlesitekit-settings-notice">
+							<div className="googlesitekit-settings-notice__text">
+								{ switchOffMessage }
+							</div>
+						</div>
+					}
+				</Fragment>
+			);
+		}
 
-							{
-								useSnippet && switchOnMessage &&
-								<div className="googlesitekit-settings-notice googlesitekit-settings-notice--suggestion">
-									<div className="googlesitekit-settings-notice__text">
-										{ switchOnMessage }
-									</div>
-								</div>
-							}
-							{
-								! useSnippet && switchOffMessage &&
-								<div className="googlesitekit-settings-notice">
-									<div className="googlesitekit-settings-notice__text">
-										{ switchOffMessage }
-									</div>
-								</div>
-							}
-						</Fragment> :
-						<Fragment>
-							{	__( 'The AdSense code has', 'google-site-kit' ) } {
-								useSnippet ?
-									__( 'been placed on your site.', 'google-site-kit' ) :
-									__( 'not been placed on your site.', 'google-site-kit' )
-							}
-						</Fragment>
-				}
-			</Fragment>
-		);
+		return this.renderMetaItems();
 	}
+
+	renderMetaItems() {
+		const { useSnippet, accountID } = this.state;
+		const { statusMessage } = this.props;
+		const metaItems = [
+			[
+				{
+					label: 'Publisher Id',
+					metaData: accountID,
+				},
+				{
+					label: 'Adsense code',
+					metaData: `${ __( 'The AdSense code has', 'google-site-kit' ) } 
+							  ${ useSnippet ?
+		__( 'been placed on your site.', 'google-site-kit' ) :
+		__( 'not been placed on your site.', 'google-site-kit' ) }`,
+				},
+				{
+					label: 'Site status',
+					metaData: <Fragment>
+						{ __( 'Check your site status in ', 'google-site-kit' ) }
+						<a href="https://www.google.com/adsense/new/sites/my-sites">
+							site
+						</a>
+					</Fragment>,
+				},
+			],
+			[
+				{
+					label: 'Account status',
+					metaData: statusMessage || 'TEST MESSAGE',
+				},
+			],
+		];
+
+		return metaItems.map( ( list, i ) => {
+			return (
+				<div className="googlesitekit-settings-module__meta-items" key={ i }>
+					{
+						list.map( ( item, j ) => {
+							const { label, metaData } = item;
+							if ( !! metaData ) {
+								return (
+									<div className="googlesitekit-settings-module__meta-item" key={ j }>
+										<p className="googlesitekit-settings-module__meta-item-type">
+											{ label }
+										</p>
+										<h5 className="googlesitekit-settings-module__meta-item-data">
+											{ metaData }
+										</h5>
+									</div>
+								);
+							}
+
+							return null;
+						} )
+					}
+				</div>
+			);
+		} );
+	}
+
+	// async updateAccountStatus() {
+	// 	const existingTag = await getExistingTag( 'adsense' );
+	// 	const setLoadingMessage = ( message ) => {
+	// 		this.setState( { loadingMessage: message } );
+	// 	};
+
+	// 	const { accountStatus, clientID } = await getAdSenseAccountStatus( existingTag, setLoadingMessage );
+	// 	//const { statusMessage } = propsFromAccountStatus( accountStatus, existingTag );
+
+	// 	this.setState( {
+	// 		accountStatus,
+	// 		//	statusMessage,
+	// 		clientID } );
+	// }
 }
 
 AdSenseSettings.propTypes = {
