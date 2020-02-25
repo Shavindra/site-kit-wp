@@ -21,7 +21,7 @@
  */
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds } from 'GoogleUtil';
+import { getTimeInSeconds } from '../../../../../assets/js/util';
 import { getDataTableFromData, TableOverflowContainer } from 'GoogleComponents/data-table';
 import MiniChart from 'GoogleComponents/mini-chart';
 import PreviewTable from 'GoogleComponents/preview-table';

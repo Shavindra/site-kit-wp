@@ -13,7 +13,7 @@ import { __ } from '@wordpress/i18n';
  */
 import DashboardModuleHeader from 'GoogleComponents/dashboard/dashboard-module-header';
 import CTA from 'GoogleComponents/notifications/cta';
-import { createAddToFilter } from 'GoogleUtil/helpers';
+import { createAddToFilter } from './assets/js/util//helpers';
 import Layout from 'GoogleComponents/layout/layout';
 import DashboardAcquisitionPieChart from 'GoogleModules/analytics/dashboard/dashboard-widget-acquisition-piechart';
 import AnalyticsAllTrafficDashboardWidgetTopAcquisitionSources from 'GoogleModules/analytics/dashboard/dashboard-alltraffic-widget-top-acquisition-sources-table';

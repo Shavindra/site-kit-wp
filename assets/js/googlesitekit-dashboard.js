@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { clearWebStorage, loadTranslations } from 'GoogleUtil';
+import { clearWebStorage, loadTranslations } from '../../assets/js/util/';
 import Setup from 'GoogleComponents/setup/setup-wrapper';
 import DashboardApp from 'GoogleComponents/dashboard/dashboard-app';
 import NotificationCounter from 'GoogleComponents/notifications/notification-counter';

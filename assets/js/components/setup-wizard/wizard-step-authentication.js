@@ -24,7 +24,7 @@ import Button from 'GoogleComponents/button';
 import Link from 'GoogleComponents/link';
 import {
 	trackEvent,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import OptIn from 'GoogleComponents/optin';
 import HelpLink from 'GoogleComponents/help-link';
 

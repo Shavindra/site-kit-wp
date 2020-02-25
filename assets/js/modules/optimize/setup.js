@@ -23,13 +23,13 @@ import Button from 'GoogleComponents/button';
 import Link from 'GoogleComponents/link';
 import data, { TYPE_MODULES } from 'GoogleComponents/data';
 import { TextField, Input, HelperText } from 'SiteKitCore/material-components';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../../assets/js/util/svg-icon';
 import PropTypes from 'prop-types';
 import {
 	validateJSON,
 	validateOptimizeID,
 	toggleConfirmModuleSettings,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 
 /**
  * WordPress dependencies

@@ -22,7 +22,7 @@
  */
 import CTA from 'GoogleComponents/notifications/cta';
 import ctaWrapper from 'GoogleComponents/notifications/cta-wrapper';
-import { getReAuthURL } from 'GoogleUtil';
+import { getReAuthURL } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

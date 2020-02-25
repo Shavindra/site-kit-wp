@@ -25,7 +25,7 @@ import PropTypes from 'prop-types';
 import {
 	trackEvent,
 	toggleConfirmModuleSettings,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 
 /**
  * WordPress dependencies

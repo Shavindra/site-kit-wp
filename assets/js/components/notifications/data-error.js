@@ -21,7 +21,7 @@
  */
 import CTA from 'GoogleComponents/notifications/cta';
 import ctaWrapper from 'GoogleComponents/notifications/cta-wrapper';
-import { showErrorNotification } from 'GoogleUtil';
+import { showErrorNotification } from '../../../../assets/js/util';
 import InvalidCredentialsWarning
 	from 'SiteKitCore/components/notifications/invalid-credentials-warning';
 

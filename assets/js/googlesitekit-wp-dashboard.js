@@ -20,7 +20,7 @@
 /**
  * External dependencies
  */
-import { loadTranslations } from 'GoogleUtil';
+import { loadTranslations } from '../../assets/js/util/';
 import 'GoogleModules';
 
 /**

@@ -15,7 +15,7 @@ import { addFilter, doAction, removeAllFilters } from '@wordpress/hooks';
 import { googlesitekit as wpAdminBarData } from '../.storybook/data/blog---googlesitekit';
 import AnalyticsAdminbarWidget from 'GoogleModules/analytics/adminbar/adminbar-widget';
 import GoogleSitekitSearchConsoleAdminbarWidget from 'GoogleModules/search-console/adminbar/adminbar-widget';
-import { createAddToFilter } from 'GoogleUtil/helpers';
+import { createAddToFilter } from '../assets/js/util//helpers';
 
 storiesOf( 'Global', module )
 	.add( 'Admin Bar', () => {

@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { getQueryParameter } from 'GoogleUtil';
+import { getQueryParameter } from '../../../../assets/js/util';
 import Notification from 'GoogleComponents/notifications/notification';
 import ModulesList from 'GoogleComponents/modules-list';
 

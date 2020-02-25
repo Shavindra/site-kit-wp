@@ -24,15 +24,15 @@ import DataBlock from 'GoogleComponents/data-block';
 import CTA from 'GoogleComponents/notifications/cta';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import {
-	getTimeInSeconds,
-	prepareSecondsForDisplay,
-	readableLargeNumber,
-} from 'GoogleUtil';
 
 /**
  * Internal dependencies
  */
+import {
+	getTimeInSeconds,
+	prepareSecondsForDisplay,
+	readableLargeNumber,
+} from '../../../../../assets/js/util';
 import { calculateOverviewData, getAnalyticsErrorMessageFromData, isDataZeroForReporting, overviewReportDataDefaults } from '../util';
 
 /**

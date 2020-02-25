@@ -21,7 +21,7 @@
  */
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds, numberFormat } from 'GoogleUtil';
+import { getTimeInSeconds, numberFormat } from '../../../../../assets/js/util';
 import { getDataTableFromData, TableOverflowContainer } from 'GoogleComponents/data-table';
 import PreviewTable from 'GoogleComponents/preview-table';
 import { map } from 'lodash';

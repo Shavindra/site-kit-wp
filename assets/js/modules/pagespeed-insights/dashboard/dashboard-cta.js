@@ -8,7 +8,16 @@ import {
 	activateOrDeactivateModule,
 	getReAuthURL,
 	showErrorNotification,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
+
+/**
+ * Internal dependencies
+ */
+import {
+	activateOrDeactivateModule,
+	getReAuthURL,
+	showErrorNotification,
+} from '../../../../../assets/js/util';
 
 /**
  * WordPress dependencies

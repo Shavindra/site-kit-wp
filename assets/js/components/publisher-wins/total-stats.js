@@ -20,7 +20,7 @@
  * External dependencies
  */
 import { extractSearchConsoleDashboardData } from 'GoogleModules/search-console/dashboard/util';
-import { getTimeInSeconds, getDaysBetweenDates } from 'GoogleUtil';
+import { getTimeInSeconds, getDaysBetweenDates } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

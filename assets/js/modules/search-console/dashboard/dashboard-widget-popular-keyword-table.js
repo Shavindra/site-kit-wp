@@ -21,24 +21,24 @@
  */
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds, numberFormat } from 'GoogleUtil';
 import { getDataTableFromData, TableOverflowContainer } from 'GoogleComponents/data-table';
 import PreviewTable from 'GoogleComponents/preview-table';
 import Layout from 'GoogleComponents/layout/layout';
 import { map } from 'lodash';
 
 /**
+ * Internal dependencies
+ */
+import { getTimeInSeconds, numberFormat } from '../../../../../assets/js/util';
+import {
+	isDataZeroSearchConsole,
+} from '../dashboard/util';
+
+/**
  * WordPress dependencies
  */
 import { __, _x, sprintf } from '@wordpress/i18n';
 import { Component } from '@wordpress/element';
-
-/**
- * Internal dependencies
- */
-import {
-	isDataZeroSearchConsole,
-} from '../dashboard/util';
 
 class DashboardWidgetPopularKeywordsTable extends Component {
 	static renderLayout( component ) {

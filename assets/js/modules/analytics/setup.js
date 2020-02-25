@@ -27,12 +27,12 @@ import Link from 'GoogleComponents/link';
 import Radio from 'GoogleComponents/radio';
 import Switch from 'GoogleComponents/switch';
 import { Select, Option } from 'SiteKitCore/material-components';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../../assets/js/util/svg-icon';
 import {
 	trackEvent,
 	getExistingTag,
 	toggleConfirmModuleSettings,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 
 /**
  * WordPress dependencies

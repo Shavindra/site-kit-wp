@@ -21,7 +21,7 @@
  */
 import Checkbox from 'GoogleComponents/checkbox';
 import PropTypes from 'prop-types';
-import { getMetaKeyForUserOption } from 'GoogleUtil';
+import { getMetaKeyForUserOption } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

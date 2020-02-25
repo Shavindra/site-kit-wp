@@ -17,11 +17,6 @@
  */
 
 /**
- * External dependencies
- */
-import { createAddToFilter } from 'GoogleUtil/helpers';
-
-/**
  * WordPress dependencies
  */
 import { addFilter } from '@wordpress/hooks';
@@ -32,6 +27,7 @@ import { addFilter } from '@wordpress/hooks';
 import DashboardSpeed from './dashboard/dashboard-widget-speed';
 import PageSpeedInsightsDashboardWidgetHomepageSpeed from './dashboard/dashboard-widget-homepage-speed';
 import PageSpeedInsightsCTA from './dashboard/dashboard-cta';
+import { createAddToFilter } from '../../../../assets/js/util/helpers';
 
 const slug = 'pagespeed-insights';
 

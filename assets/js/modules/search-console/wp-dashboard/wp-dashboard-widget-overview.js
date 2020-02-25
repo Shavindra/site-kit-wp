@@ -23,10 +23,11 @@ import PreviewBlocks from 'GoogleComponents/preview-blocks';
 import DataBlock from 'GoogleComponents/data-block';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds } from 'GoogleUtil';
+
 /**
  * Internal dependencies
  */
+import { getTimeInSeconds } from '../../../../assets/js/util';
 import {
 	extractSearchConsoleDashboardData,
 	isDataZeroSearchConsole,

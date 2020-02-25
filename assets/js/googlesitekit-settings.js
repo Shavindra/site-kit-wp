@@ -21,7 +21,7 @@
  * External dependencies
  */
 import 'GoogleComponents/notifications';
-import { loadTranslations } from 'GoogleUtil';
+import { loadTranslations } from '../../assets/js/util/';
 import 'GoogleModules';
 
 /**

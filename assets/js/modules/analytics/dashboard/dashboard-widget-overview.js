@@ -26,7 +26,7 @@ import {
 	getTimeInSeconds,
 	prepareSecondsForDisplay,
 	readableLargeNumber,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 /**
  * Internal dependencies
  */

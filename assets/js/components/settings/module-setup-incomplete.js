@@ -21,7 +21,7 @@
  */
 import {
 	getReAuthURL,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import Link from 'GoogleComponents/link';
 import ModuleSettingsWarning from 'GoogleComponents/notifications/module-settings-warning';
 

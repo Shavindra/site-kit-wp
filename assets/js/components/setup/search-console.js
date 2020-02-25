@@ -25,7 +25,7 @@ import { Select, TextField, Input } from 'SiteKitCore/material-components';
 import PropTypes from 'prop-types';
 import Button from 'SiteKitCore/components/button';
 import HelpLink from 'GoogleComponents/help-link';
-import { trackEvent } from 'GoogleUtil';
+import { trackEvent } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

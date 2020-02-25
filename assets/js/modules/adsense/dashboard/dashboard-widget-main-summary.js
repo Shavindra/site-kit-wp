@@ -27,7 +27,7 @@ import {
 	readableLargeNumber,
 	extractForSparkline,
 	getSiteKitAdminURL,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import DataBlock from 'GoogleComponents/data-block';
 import Sparkline from 'GoogleComponents/sparkline';
 

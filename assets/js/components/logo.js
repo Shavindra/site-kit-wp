@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../assets/js/util/svg-icon';
 /**
  * WordPress dependencies
  */

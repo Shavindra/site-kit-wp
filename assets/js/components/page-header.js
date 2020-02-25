@@ -21,7 +21,7 @@
 import DateRangeSelector from 'GoogleComponents/date-range-selector';
 
 import PropTypes from 'prop-types';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../assets/js/util/svg-icon';
 
 /**
  * WordPress dependencies

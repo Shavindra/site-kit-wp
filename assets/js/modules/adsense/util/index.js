@@ -21,7 +21,7 @@
  */
 import { parse as pslParse } from 'psl';
 import data, { TYPE_MODULES } from 'GoogleComponents/data';
-import { trackEvent, getReAuthURL, getSiteKitAdminURL } from 'GoogleUtil';
+import { trackEvent, getReAuthURL, getSiteKitAdminURL } from '../../../../assets/js/util';
 import { each, find, filter } from 'lodash';
 
 /**

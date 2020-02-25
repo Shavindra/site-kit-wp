@@ -26,9 +26,13 @@ import Button from 'GoogleComponents/button';
 import Warning from 'GoogleComponents/notifications/warning';
 import Error from 'GoogleComponents/notifications/error';
 import Link from 'GoogleComponents/link';
-import SvgIcon from 'GoogleUtil/svg-icon';
-
 import { map } from 'lodash';
+
+/**
+ * Internal dependencies
+ */
+import { SvgIcon } from '../../../../assets/js/util';
+ 
 /**
  * WordPress dependencies
  */

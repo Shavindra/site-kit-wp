@@ -23,7 +23,7 @@ import PropTypes from 'prop-types';
 import Link from 'GoogleComponents/link';
 import Button from 'GoogleComponents/button';
 import data, { TYPE_MODULES } from 'GoogleComponents/data';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../assets/js/util/svg-icon';
 import SetupModule from 'GoogleComponents/setup-module';
 import Dialog from 'GoogleComponents/dialog';
 import ModuleSettingsDetails from 'GoogleComponents/settings/module-settings-details';
@@ -34,7 +34,7 @@ import {
 	getReAuthURL,
 	moduleIcon,
 	showErrorNotification,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import Spinner from 'GoogleComponents/spinner';
 import SettingsOverlay from 'GoogleComponents/settings/settings-overlay';
 import GenericError from 'GoogleComponents/notifications/generic-error';

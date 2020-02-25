@@ -20,7 +20,7 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../../assets/js/util/svg-icon';
 
 /**
  * WordPress dependencies
@@ -33,7 +33,7 @@ import { __, _x } from '@wordpress/i18n';
  */
 import AdSenseSetupInstructions from '../setup/adsense-setup-instructions';
 import AdSenseInProcessStatus from './adsense-in-process-status';
-import { getExistingTag } from 'GoogleUtil';
+import { getExistingTag } from '../../../../../assets/js/util';
 import { getAdSenseAccountStatus, propsFromAccountStatus } from '../util';
 
 class AdSenseModuleStatus extends Component {

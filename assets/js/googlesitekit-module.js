@@ -22,7 +22,7 @@
 import ProgressBar from 'GoogleComponents/progress-bar';
 import 'GoogleComponents/data';
 import 'GoogleComponents/notifications';
-import { loadTranslations } from 'GoogleUtil';
+import { loadTranslations } from '../../assets/js/util/';
 import 'GoogleModules';
 
 /**

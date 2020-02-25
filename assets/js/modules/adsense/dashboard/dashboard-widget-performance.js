@@ -22,16 +22,16 @@
 import { TYPE_MODULES } from 'GoogleComponents/data';
 import DataBlock from 'GoogleComponents/data-block.js';
 import PreviewBlock from 'GoogleComponents/preview-block';
-import {
-	getTimeInSeconds,
-	readableLargeNumber,
-} from 'GoogleUtil';
+
 /**
  * Internal dependencies
  */
 import { isDataZeroAdSense } from '../util';
 import withData from '../../../components/higherorder/withdata';
-
+import {
+	getTimeInSeconds,
+	readableLargeNumber,
+} from '../../../../../assets/js/util';
 /**
  * WordPress dependencies
  */

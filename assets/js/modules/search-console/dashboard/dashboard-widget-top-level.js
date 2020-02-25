@@ -43,7 +43,7 @@ import {
 	extractForSparkline,
 	getSiteKitAdminURL,
 	trackEvent,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import CTA from 'GoogleComponents/notifications/cta';
 
 class SearchConsoleDashboardWidgetTopLevel extends Component {

@@ -24,7 +24,7 @@ import {
 	refreshAuthentication,
 	getReAuthURL,
 	showErrorNotification,
-} from 'GoogleUtil';
+} from '../../../assets/js/util';
 import data from 'GoogleComponents/data';
 import CTA from 'GoogleComponents/notifications/cta';
 import PropTypes from 'prop-types';

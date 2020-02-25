@@ -14,7 +14,7 @@ import { addFilter } from '@wordpress/hooks';
  * Internal dependencies
  */
 import { googlesitekit as settingsData } from '../.storybook/data/wp-admin-admin.php-page=googlesitekit-settings-googlesitekit.js';
-import { fillFilterWithComponent } from 'GoogleUtil';
+import { fillFilterWithComponent } from './assets/js/util/';
 import AnalyticsSetup from 'GoogleModules/analytics/setup';
 import SearchConsoleSettingStatus from 'GoogleModules/search-console/settings/search-console-settings-status';
 import SettingsAdmin from '../assets/js/components/settings/settings-admin';

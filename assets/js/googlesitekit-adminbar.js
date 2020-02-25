@@ -27,7 +27,7 @@ import {
 	getSiteKitAdminURL,
 	loadTranslations,
 	trackEvent,
-} from 'GoogleUtil';
+} from '../../assets/js/util/';
 import 'GoogleModules';
 
 /**

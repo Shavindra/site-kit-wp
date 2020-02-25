@@ -28,7 +28,7 @@ import { doAction } from '@wordpress/hooks';
 /**
  * External dependencies
  */
-import { loadTranslations, trackEvent } from 'GoogleUtil';
+import { loadTranslations, trackEvent } from '../../assets/js/util/';
 import 'GoogleComponents/notifications';
 
 /**

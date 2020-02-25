@@ -19,8 +19,8 @@
 /**
  * External dependencies
  */
-import { fillFilterWithComponent, getSiteKitAdminURL } from 'GoogleUtil';
-import { createAddToFilter } from 'GoogleUtil/helpers';
+import { fillFilterWithComponent, getSiteKitAdminURL } from '../../../../../assets/js/util';
+import { createAddToFilter } from '../../../../../assets/js/util/helpers';
 /**
  * Internal dependencies
  */

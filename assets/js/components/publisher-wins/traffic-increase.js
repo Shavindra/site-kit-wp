@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { getTimeInSeconds, readableLargeNumber } from 'GoogleUtil';
+import { getTimeInSeconds, readableLargeNumber } from '../../../../assets/js/util';
 import { calculateOverviewData } from 'GoogleModules/analytics/util';
 
 /**

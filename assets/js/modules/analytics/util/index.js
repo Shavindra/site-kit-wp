@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { changeToPercent } from 'GoogleUtil';
+import { changeToPercent } from '../../../../../assets/js/util';
 import { each } from 'lodash';
 
 /**

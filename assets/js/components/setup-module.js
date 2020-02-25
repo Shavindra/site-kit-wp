@@ -30,7 +30,7 @@ import {
 	getReAuthURL,
 	showErrorNotification,
 	moduleIcon,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import GenericError from 'GoogleComponents/notifications/generic-error';
 
 /**

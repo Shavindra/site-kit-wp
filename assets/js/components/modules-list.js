@@ -27,7 +27,7 @@ import {
 	activateOrDeactivateModule,
 	showErrorNotification,
 	moduleIcon,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import GenericError from 'GoogleComponents/notifications/generic-error';
 import ModuleSettingsWarning from 'GoogleComponents/notifications/module-settings-warning';
 

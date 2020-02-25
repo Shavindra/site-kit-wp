@@ -31,7 +31,7 @@ import Button from 'GoogleComponents/button';
 import Layout from 'GoogleComponents/layout/layout';
 import {
 	getSiteKitAdminURL,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

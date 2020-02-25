@@ -21,7 +21,7 @@
  */
 import PropTypes from 'prop-types';
 import Button from 'GoogleComponents/button';
-import { trackEvent } from 'GoogleUtil';
+import { trackEvent } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

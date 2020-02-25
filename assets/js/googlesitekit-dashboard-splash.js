@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { clearWebStorage, loadTranslations } from 'GoogleUtil';
+import { clearWebStorage, loadTranslations } from '../../assets/js/util/';
 import 'GoogleComponents/notifications';
 
 /**

@@ -22,7 +22,6 @@
 import withData from 'GoogleComponents/higherorder/withdata';
 import getDataErrorComponent from 'GoogleComponents/notifications/data-error';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds } from 'GoogleUtil';
 import {
 	getDataTableFromData,
 	TableOverflowContainer,
@@ -30,19 +29,20 @@ import {
 import { get } from 'lodash';
 
 /**
- * WordPress dependencies
- */
-import { Component } from '@wordpress/element';
-import { __, _x } from '@wordpress/i18n';
-
-/**
  * Internal dependencies
  */
+import { getTimeInSeconds } from '../../../../../assets/js/util';
 import {
 	getScoreCategoryLabel,
 	PageSpeedReportScoreCategoryWrapper,
 	PageSpeedReportScoreGauge,
 } from './util';
+
+/**
+ * WordPress dependencies
+ */
+import { Component } from '@wordpress/element';
+import { __, _x } from '@wordpress/i18n';
 
 const hasData = ( data ) => {
 	return !! get( data, 'categories.performance.score' );

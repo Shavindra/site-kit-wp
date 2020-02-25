@@ -43,7 +43,7 @@ import getNoDataComponent from 'GoogleComponents/notifications/nodata';
 import getDataErrorComponent from 'GoogleComponents/notifications/data-error';
 import AdSenseDashboardOutro from 'GoogleModules/adsense/dashboard/dashboard-outro';
 import { isAdsenseConnectedAnalytics } from 'GoogleModules/adsense/util';
-import { getDateRangeFrom } from 'GoogleUtil';
+import { getDateRangeFrom } from '../../../../../assets/js/util';
 import HelpLink from 'GoogleComponents/help-link';
 
 class AnalyticsDashboardWidget extends Component {

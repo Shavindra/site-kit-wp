@@ -30,7 +30,7 @@ import {
 	readableLargeNumber,
 	extractForSparkline,
 	getSiteKitAdminURL,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import { isEmpty } from 'lodash';
 
 /**

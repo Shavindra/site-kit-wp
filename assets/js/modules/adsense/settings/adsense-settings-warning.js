@@ -1,7 +1,8 @@
 /**
- * External dependencies
+ * Internal dependencies
  */
-import SvgIcon from 'GoogleUtil/svg-icon';
+import { SvgIcon } from '../../../../assets/js/util';
+ 
 /**
  * WordPress dependencies
  */

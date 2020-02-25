@@ -23,11 +23,11 @@ import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
 import GoogleChart from 'GoogleComponents/google-chart.js';
 import PreviewBlock from 'GoogleComponents/preview-block';
-import { decodeHtmlEntity, getTimeInSeconds } from 'GoogleUtil';
 
 /**
  * Internal dependencies
  */
+import { decodeHtmlEntity, getTimeInSeconds } from '../../../../../assets/js/util';
 import { extractSearchConsoleDashboardData } from './util';
 
 /**

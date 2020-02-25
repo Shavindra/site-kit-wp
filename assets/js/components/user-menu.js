@@ -22,7 +22,7 @@ import Dialog from 'GoogleComponents/dialog';
 import Button from 'GoogleComponents/button';
 import Menu from 'GoogleComponents/menu';
 import Modal from 'GoogleComponents/modal';
-import { clearWebStorage } from 'GoogleUtil';
+import { clearWebStorage } from '../../../../assets/js/util';
 import { getSiteKitAdminURL } from 'SiteKitCore/util';
 
 /**

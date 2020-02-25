@@ -20,7 +20,7 @@
  * External dependencies
  */
 import PropTypes from 'prop-types';
-import SvgIcon from 'GoogleUtil/svg-icon';
+import SvgIcon from '../../../../assets/js/util/svg-icon';
 import React from 'react';
 
 /**

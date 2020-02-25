@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import SvgIcon from 'GoogleUtil/svg-icon';
+import { SvgIcon } from '../../../../../assets/js/util';
 import Button from 'GoogleComponents/button';
 
 /**

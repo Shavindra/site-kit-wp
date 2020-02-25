@@ -20,7 +20,7 @@
  * External dependencies
  */
 import data from 'GoogleComponents/data';
-import { getDaysBetweenDates, getTimeInSeconds } from 'GoogleUtil';
+import { getDaysBetweenDates, getTimeInSeconds } from '../../../../assets/js/util';
 /**
  * Internal dependencies
  */

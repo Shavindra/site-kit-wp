@@ -21,7 +21,7 @@
  */
 import {
 	getSiteKitAdminURL,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import Link from 'GoogleComponents/link';
 
 /**

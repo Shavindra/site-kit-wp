@@ -30,7 +30,7 @@ module.exports = {
 	moduleNameMapper: {
 		'^SiteKitCore/(.*)$': '<rootDir>assets/js/$1',
 		'^GoogleComponents/(.*)$': '<rootDir>assets/js/components/$1',
-		'^GoogleUtil/(.*)$': '<rootDir>assets/js/util/$1',
+		'^./assets/js/util//(.*)$': '<rootDir>assets/js/util/$1',
 		'^GoogleModules/(.*)$': '<rootDir>assets/js/modules/$1',
 	},
 	coveragePathIgnorePatterns: [ '/node_modules/', '<rootDir>/build/' ],

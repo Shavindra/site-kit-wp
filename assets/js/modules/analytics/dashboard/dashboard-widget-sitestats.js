@@ -22,7 +22,7 @@
 import GoogleChart from 'GoogleComponents/google-chart';
 import {
 	getTimeInSeconds,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
 /**

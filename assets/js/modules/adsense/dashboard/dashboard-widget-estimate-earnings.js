@@ -24,7 +24,7 @@ import PreviewBlock from 'GoogleComponents/preview-block';
 import {
 	getTimeInSeconds,
 	readableLargeNumber,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
 /**

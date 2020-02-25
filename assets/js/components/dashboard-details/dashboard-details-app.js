@@ -17,19 +17,20 @@
  */
 
 /**
- * Internal dependencies
- */
-import DashboardDetailsModules from './dashboard-details-modules';
-/**
  * External dependencies
  */
 import Header from 'GoogleComponents/header';
 import Link from 'GoogleComponents/link';
 import PageHeader from 'GoogleComponents/page-header';
-import Layout from 'GoogleComponents/layout/layout';
-import { decodeHtmlEntity } from 'GoogleUtil';
+import { decodeHtmlEntity } from '../../../../assets/js/util';
 import DateRangeSelector from 'GoogleComponents/date-range-selector';
 import HelpLink from 'GoogleComponents/help-link';
+
+/**
+ * Internal dependencies
+ */
+import DashboardDetailsModules from './dashboard-details-modules';
+import Layout from 'GoogleComponents/layout/layout';
 
 /**
  * WordPress dependencies

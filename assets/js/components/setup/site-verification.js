@@ -27,7 +27,7 @@ import PropTypes from 'prop-types';
 import {
 	validateJSON,
 	trackEvent,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import HelpLink from 'GoogleComponents/help-link';
 
 /**

@@ -34,7 +34,7 @@ import Header from 'GoogleComponents/header';
 import Button from 'GoogleComponents/button';
 import Layout from 'GoogleComponents/layout/layout';
 import data, { TYPE_CORE } from 'GoogleComponents/data';
-import { trackEvent, clearWebStorage } from 'GoogleUtil';
+import { trackEvent, clearWebStorage } from '../../../../assets/js/util';
 import { getSiteKitAdminURL } from 'SiteKitCore/util';
 import STEPS from 'GoogleComponents/setup-wizard/wizard-steps';
 import WizardProgressStep from 'GoogleComponents/setup-wizard/wizard-progress-step';

@@ -20,7 +20,7 @@
  * External dependencies
  */
 import GoogleChart from 'GoogleComponents/google-chart';
-import { getSiteKitAdminURL, getTimeInSeconds } from 'GoogleUtil';
+import { getSiteKitAdminURL, getTimeInSeconds } from '../../../../../assets/js/util';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
 

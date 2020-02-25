@@ -22,7 +22,7 @@
 import data, { TYPE_CORE } from 'GoogleComponents/data';
 import {
 	clearWebStorage,
-} from 'GoogleUtil';
+} from '../../../../assets/js/util';
 import Dialog from 'GoogleComponents/dialog';
 
 /**

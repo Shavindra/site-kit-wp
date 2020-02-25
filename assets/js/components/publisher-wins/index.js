@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { getTimeInSeconds, getQueryParameter } from 'GoogleUtil';
+import { getTimeInSeconds, getQueryParameter } from '../../../../assets/js/util';
 import { TYPE_MODULES } from 'GoogleComponents/data';
 import * as publisherWinCallbacks from 'GoogleComponents/publisher-wins/callbacks';
 /**

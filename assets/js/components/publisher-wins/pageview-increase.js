@@ -19,7 +19,7 @@
 /**
  * External dependencies
  */
-import { numberFormat, getTimeInSeconds } from 'GoogleUtil';
+import { numberFormat, getTimeInSeconds } from '../../../../assets/js/util';
 import { calculateOverviewData } from 'GoogleModules/analytics/util';
 
 /**

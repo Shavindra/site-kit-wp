@@ -25,7 +25,7 @@ import { TYPE_MODULES } from 'GoogleComponents/data';
 import {
 	getTimeInSeconds,
 	readableLargeNumber,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 /**
  * Internal dependencies
  */

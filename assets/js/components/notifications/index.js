@@ -23,8 +23,8 @@ import DashboardSetupAlerts from 'GoogleComponents/notifications/dashboard-setup
 import DashboardModulesAlerts from 'GoogleComponents/notifications/dashboard-modules-alerts';
 import DashboardWinsAlerts from 'GoogleComponents/notifications/dashboard-wins-alerts';
 import DashboardAuthAlert from 'GoogleComponents/notifications/dashboard-auth-alert';
-import { createAddToFilter } from 'GoogleUtil/helpers';
-import { getQueryParameter } from 'GoogleUtil';
+import { createAddToFilter } from '../../../../assets/js/util/helpers';
+import { getQueryParameter } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

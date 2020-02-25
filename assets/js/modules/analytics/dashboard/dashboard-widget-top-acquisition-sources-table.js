@@ -25,7 +25,7 @@ import {
 	getTimeInSeconds,
 	numberFormat,
 	getDateRangeFrom,
-} from 'GoogleUtil';
+} from '../../../../../assets/js/util';
 import { getDataTableFromData, TableOverflowContainer } from 'GoogleComponents/data-table';
 import PreviewTable from 'GoogleComponents/preview-table';
 import MiniChart from 'GoogleComponents/mini-chart';

@@ -19,8 +19,13 @@
 /**
  * External dependencies
  */
-import { fillFilterWithComponent } from 'GoogleUtil';
 import TagmanagerSetup from 'GoogleModules/tagmanager/setup';
+
+/**
+ * Internal dependencies
+ */
+import { fillFilterWithComponent } from '../../../../assets/js/util';
+
 /**
  * WordPress dependencies
  */

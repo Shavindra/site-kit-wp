@@ -9,7 +9,6 @@ module.exports = async ( { config } ) => {
 			'@wordpress/api-fetch$': path.resolve( __dirname, 'wp-api-fetch-mock.js' ),
 			SiteKitCore: path.resolve( __dirname, '../assets/js/' ),
 			GoogleComponents: path.resolve( __dirname, '../assets/js/components/' ),
-			GoogleUtil: path.resolve( __dirname, '../assets/js/util/' ),
 			GoogleModules: path.resolve( __dirname, '../assets/js/modules/' ),
 		},
 	};

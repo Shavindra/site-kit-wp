@@ -34,8 +34,7 @@ import DashboardPopularity from './dashboard/dashboard-widget-popularity';
 import PostSearcher from 'GoogleComponents/post-searcher';
 import SearchConsoleSettingStatus from './settings/search-console-settings-status';
 
-import { createAddToFilter } from 'GoogleUtil/helpers';
-import { fillFilterWithComponent } from 'GoogleUtil';
+import { fillFilterWithComponent, createAddToFilter } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies

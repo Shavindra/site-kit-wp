@@ -21,7 +21,7 @@
  */
 import Layout from 'GoogleComponents/layout/layout';
 import Notification from 'GoogleComponents/notifications/notification';
-import { clearWebStorage } from 'GoogleUtil/index';
+import { clearWebStorage } from '../../../../assets/js/util/index';
 import { map, filter, sortBy } from 'lodash';
 
 /**

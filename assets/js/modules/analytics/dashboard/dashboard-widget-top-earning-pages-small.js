@@ -22,7 +22,7 @@
 import { map } from 'lodash';
 import withData from 'GoogleComponents/higherorder/withdata';
 import { TYPE_MODULES } from 'GoogleComponents/data';
-import { getTimeInSeconds } from 'GoogleUtil';
+import { getTimeInSeconds } from '../../../../../assets/js/util';
 import { getDataTableFromData, TableOverflowContainer } from 'GoogleComponents/data-table';
 import PreviewTable from 'GoogleComponents/preview-table';
 import Layout from 'GoogleComponents/layout/layout';

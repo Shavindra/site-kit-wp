@@ -22,18 +22,18 @@
 import DashboardSplashMain from 'GoogleComponents/dashboard-splash/dashboard-splash-main';
 
 /**
- * WordPress dependencies
- */
-import { Component, Fragment, Suspense, lazy } from '@wordpress/element';
-import { __ } from '@wordpress/i18n';
-
-/**
  * Internal dependencies
  */
 import DashboardSplashNotifications from './dashboard-splash-notifications';
 import ProgressBar from 'GoogleComponents/progress-bar';
-import { trackEvent } from 'GoogleUtil';
+import { trackEvent } from '../../../../assets/js/util';
 import 'GoogleComponents/publisher-wins';
+
+/**
+ * WordPress dependencies
+ */
+import { Component, Fragment, Suspense, lazy } from '@wordpress/element';
+import { __ } from '@wordpress/i18n';
 
 const AUTHENTICATION = 1;
 const SETUP = 2;

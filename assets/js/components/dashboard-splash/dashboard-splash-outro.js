@@ -19,7 +19,13 @@
 /**
  * External dependencies
  */
-import SvgIcon from 'GoogleUtil/svg-icon';
+import Button from 'GoogleComponents/button';
+import PropTypes from 'prop-types';
+
+/**
+ * Internal dependencies
+ */
+import { SvgIcon } from '../../../../assets/js/util';
 import Button from 'GoogleComponents/button';
 import PropTypes from 'prop-types';
 

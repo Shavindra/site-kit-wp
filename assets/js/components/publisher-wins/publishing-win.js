@@ -20,7 +20,7 @@
  * External dependencies
  */
 import { extractSearchConsoleDashboardData } from 'GoogleModules/search-console/dashboard/util';
-import { readableLargeNumber } from 'GoogleUtil';
+import { readableLargeNumber } from '../../../../assets/js/util';
 
 /**
  * WordPress dependencies
